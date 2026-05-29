@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — Linnéa Sörling</title>
+<style>
+  :root {
+    --file: "Portfolio_Linne%CC%81a_So%CC%88rling_2026.pdf";
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #0a0a0a;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #fff;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  header {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.9rem 1.4rem;
+    background: rgba(20, 20, 20, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+  }
+  .title {
+    font-size: 14px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 1.1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 999px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background 0.2s ease, border-color 0.2s ease;
+  }
+  .download:hover {
+    background: #fff;
+    color: #0a0a0a;
+    border-color: #fff;
+  }
+  .download svg { width: 15px; height: 15px; }
+  .viewer {
+    flex: 1 1 auto;
+    min-height: 0;
+    position: relative;
+  }
+  .viewer object,
+  .viewer iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  .fallback {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    text-align: center;
+    padding: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  @media (max-width: 520px) {
+    .title { font-size: 12px; }
+    .download { padding: 0.5rem 0.9rem; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <span class="title">Portfolio · Linnéa Sörling 2026</span>
+    <a class="download" href="Portfolio_Linne%CC%81a_So%CC%88rling_2026.pdf" download>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      Download
+    </a>
+  </header>
+  <div class="viewer">
+    <object data="Portfolio_Linne%CC%81a_So%CC%88rling_2026.pdf#view=FitH" type="application/pdf">
+      <iframe src="Portfolio_Linne%CC%81a_So%CC%88rling_2026.pdf#view=FitH" title="Portfolio">
+        <div class="fallback">
+          <p>Your browser can't display the PDF inline.</p>
+          <a class="download" href="Portfolio_Linne%CC%81a_So%CC%88rling_2026.pdf" download>Download PDF</a>
+        </div>
+      </iframe>
+    </object>
+  </div>
+</body>
+</html>
